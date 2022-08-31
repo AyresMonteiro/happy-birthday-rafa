@@ -28,14 +28,18 @@
   flex-grow: 1;
 }
 
-.title a {
+.title {
+  animation: fade 1s;
+}
+
+.title strong {
   color: #0070f3;
   text-decoration: none;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
+.title strong:hover,
+.title strong:focus,
+.title strong:active {
   text-decoration: underline;
 }
 
@@ -48,6 +52,10 @@
 .title,
 .description {
   text-align: center;
+}
+
+.description {
+  animation: upperFade 2s;
 }
 
 .description {
@@ -126,4 +134,14 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes upperFade {
+  from {opacity: 0; position: relative; bottom: -20px;}
+  to {opacity: 1; position: relative; bottom: 0px;}
 }
